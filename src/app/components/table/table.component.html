@@ -1,0 +1,16 @@
+<div class="table-responsive">
+    <table class="table" *ngIf="resultados">
+        <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col" *ngFor="let item of ObjectKeys(resultados[0])">{{item}}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of resultados; let i=index">
+                <th scope="row">{{i+1}}</th>
+                <td *ngFor="let valor of ObjectValues(item)">{{valor}}</td>
+            </tr>
+          </tbody>
+    </table>
+  </div>
